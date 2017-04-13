@@ -97,12 +97,13 @@ public class StreamsDemo {
 				.sum();
 		System.out.println("Total Count of Selling is " + totalSells + "\n");
 
+		
 		/** 
 		 * Dynamically Build Processing Chain
 		 */
 		Stream <Person> stream = persons.getPersons().stream();
-		boolean female = true;
-		boolean youngAge = true;
+		boolean female = true; // this may be a separate method that returns a boolean
+		boolean youngAge = true; // this may be a separate method that returns a boolean
 		if (female) {
 			stream = stream.filter(Person::isFemale);
 		}
